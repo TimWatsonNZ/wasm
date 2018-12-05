@@ -1,0 +1,26 @@
+{
+  "name": "wasm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "asbuild:untouched": "asc assembly/fib.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
+    "asbuild:optimized": "asc assembly/fib.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimWatsonNZ/wasm.git"
+  },
+  "keywords": [],
+  "author": "Tim Watson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimWatsonNZ/wasm/issues"
+  },
+  "homepage": "https://github.com/TimWatsonNZ/wasm#readme",
+  "devDependencies": {
+    "assemblyscript": "github:AssemblyScript/assemblyscript"
+  }
+}
