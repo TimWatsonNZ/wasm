@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      var importObject = {
+        interop: {
+          logi: function(arg) {
+            console.log(arg);
+          }
+        }
+      };
+
+      fetch("interop.wasm")
+        .then(response => response.arrayBuffer())
+        .then(bytes => WebAssembly.instantiate(bytes, importObject))
+        .then(results => {
+          window.log = results.instance.exports.log;
+          log(456);
+        });
+    </script>
+  </body>
+</html>

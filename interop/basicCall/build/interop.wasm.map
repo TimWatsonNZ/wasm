@@ -1,0 +1,1 @@
+{"version":3,"sources":["assembly/interop.ts"],"names":[],"mappings":"mGAGE,AAAK","sourceRoot":"assemblyscript:///","sourceContents":["export declare function logi(value: i32): void;\n\nexport function log(intValue: i32): void {\n  logi(intValue);\n}\n\n"]}
